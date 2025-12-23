@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="heading">
+        <img src="../image/LogoJan new.jpeg" alt="" class="logo">
+        <h1>JAN PEKERJA</h1>
+    </div>
+    <div class="main">
+        <canvas></canvas> 
+    </div>
+
+    <div id="inventory" >
+        <h3>Inventory</h3>
+    </div>
+
+    <div id="dpad" class="dpad">
+        <div class="DemoDirectionUI flex-center">
+            <button class="dpad-button dpad-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+                    <path class="Arrow_outline-top"  stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+                    <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h5M7 3h5M1 4h4M7 4h5M1 5h3M7 5h5M1 6h4M7 6h5M1 7h5M7 7h5M1 8h11" />
+                    <path class="Arrow_arrow-inset"  stroke="#434343" d="M6 3h1M5 4h1M4 5h1" />
+                    <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M6 4h1M5 5h2M5 6h2M6 7h1" />
+                    <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+                    <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+                    <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+                </svg>
+            </button>
+            <button class="dpad-button dpad-up">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+                    <path class="Arrow_outline-top"  stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+                    <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h11M1 4h5M7 4h5M1 5h4M8 5h4M1 6h3M9 6h3M1 7h11M1 8h11" />
+                    <path class="Arrow_arrow-inset"  stroke="#434343" d="M6 4h1M5 5h1M7 5h1" />
+                    <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M6 5h1M4 6h5" />
+                    <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+                    <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+                    <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+                </svg>
+            </button>
+            <button class="dpad-button dpad-down">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+                    <path class="Arrow_outline-top" stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+                    <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h11M1 4h3M9 4h3M1 5h4M8 5h4M1 6h5M7 6h5M1 7h11M1 8h11" />
+                    <path class="Arrow_arrow-inset" stroke="#434343" d="M4 4h5" />
+                    <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M5 5h3M6 6h1" />
+                    <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+                    <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+                    <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+                </svg>
+            </button>
+            <button class="dpad-button dpad-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+                    <path class="Arrow_outline-top"  stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+                    <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h5M7 3h5M1 4h5M8 4h4M1 5h5M9 5h3M1 6h5M8 6h4M1 7h5M7 7h5M1 8h11" />
+                    <path class="Arrow_arrow-inset"  stroke="#434343" d="M6 3h1M7 4h1M8 5h1" />
+                    <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M6 4h1M6 5h2M6 6h2M6 7h1" />
+                    <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+                    <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+                    <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="overlappingDiv" style="
+    position: absolute; /* Ubah ke absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* Pastikan menutupi seluruh halaman */
+    height: 100%;
+    z-index: 10; /* Pastikan berada di atas elemen lainnya */
+    pointer-events: none; /* Nonaktifkan interaksi */
+    ">
+    <div style="background-color: black; opacity: 0; width: 100%; height: 100%;"></div>
+    <canvas style="height: 1450px; width: 740px;"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="collisionCave.js"></script>
+    <script src="collisionFarm.js"></script>
+    <script src="collisionMeathouse.js"></script>
+    <script src="collisionForest.js"></script>
+    <script src="homeCollision.js"></script>
+    <script src="areaHome.js"></script>
+    <script src="areaMarket.js"></script>
+    <script src="collisionMarket.js"></script>
+    <script src="area.js"></script>
+    <script src="collision.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+

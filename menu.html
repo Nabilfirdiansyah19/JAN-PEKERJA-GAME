@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Karakter</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="heading">
+        <img src="../image/LogoJan new.jpeg" alt="" class="logo">
+        <h1>JAN PEKERJA</h1>
+    </div>
+    <div class="pilihKarakter">
+
+        <h2>PILIH KARAKTER</h1>
+        <div class="container">
+            <div class="character" onclick="selectCharacter('char1down')">
+                <img src="./image/char1logo.jpeg" alt="Karakter 1" width="200px" height="200px" >
+            
+            </div>
+            <div class="character" onclick="selectCharacter('char2down')">
+                <img src="./image/char2logo.jpeg" alt="Karakter 2" width="200px" height="200px">
+               
+            </div>
+            <div class="character" onclick="selectCharacter('char3down')">
+                <img src="./image/char3logo.jpeg" alt="Karakter 3" width="200px" height="200px">
+                
+            </div>
+        </div>
+
+        <div class="form">
+            <input type="text" name="" id="playerName" placeholder="Masukkan Nama" required>
+            <button id="startBtn" >Start Exploring</button>
+        </div>
+    </div>
+    
+    <script src="menu.js"></script>
+   
+</body>
+</html>

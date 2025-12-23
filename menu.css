@@ -1,0 +1,254 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url(../image/bg1.jpg);
+    color: black;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+p{
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 0;
+    padding: 0;
+    flex-wrap: wrap; 
+}
+.character {
+    border: 3px solid rgba(255, 198, 92, 0.6); /* Warna border lebih lembut */
+    border-radius: 30px;
+    padding: 5px;
+    background-color: rgba(203, 206, 129, 0.6); /* Memberikan efek lebih terang pada background */
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; /* Penambahan transisi */
+    width: 20%;
+    min-width: 150px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.character:hover {
+    transform: scale(1.1);
+    border-color: yellow;
+    box-shadow: 0 0 20px rgba(255, 198, 92, 1); /* Menambahkan efek glow */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 5px;
+}
+
+.selected {
+    border-color: yellow;
+}
+
+.pilihKarakter {
+    color: rgb(111, 32, 111);
+    text-shadow: rgb(255, 198, 92) 3px 3px,  /* Lapisan pertama */
+        0px 0px 10px white; /* Efek glow tambahan */
+    border-top: 2px solid black;
+    margin-top: 0px;
+}
+
+.pilihKarakter div{
+    margin: 20px;
+}
+
+
+img {
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.1); /* Efek zoom pada gambar karakter */
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5%;
+}
+
+.form input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 198, 92, 0.7); /* Tambahkan border dengan warna cerah */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px; 
+    background-color: rgba(255, 255, 255, 0.8); /* Memberikan sedikit kontras */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 198, 92, 1); /* Efek glow saat input difokuskan */
+}
+.form button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.form button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 198, 92); /* Efek hover lebih terang pada tombol */
+}
+
+.heading{
+    position: relative;
+    color: rgb(111, 32, 111);
+    text-shadow: 
+        3px 3px rgb(255, 198, 92),  /* Lapisan pertama */
+        0px 0px 10px beige; /* Efek glow tambahan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1.2;
+    background-color: rgba(203, 206, 129, 0.476);;
+    padding: 20px 20px;
+    text-align: center;
+    min-height: 100px;
+    overflow:hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%; /* Lebih lebar dari elemen untuk animasi */
+    height: 200px; /* Ukuran tetap */
+    background: rgba(255, 255, 255, 0.2); /* Efek gelombang transparan putih */
+    animation: waveAnimation 4s ease-in-out infinite;
+}
+
+/* Animasi gelombang yang bergerak dari kiri ke kanan */
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Menata teks pada heading */
+.heading h1 {
+    font-family: 'Arial', sans-serif;
+    z-index: 2; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(1.5rem, 2.5vw, 3rem); 
+    margin: 0;  
+}
+
+
+.heading .logo{
+    position: relative;
+    right: 1%;
+    width: clamp(50px, 10vw, 80px); 
+    height: clamp(50px, 10vw, 80px);
+    border-radius: 50%;
+    z-index:1;
+    transition: width 0.3s, height 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        gap: 5%;
+    }
+
+    .character {
+        width: 30%;
+    }
+
+    .form input, .form button {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .character {
+        width: 40%; 
+    }
+
+    .form input, .form button {
+        max-width: 90%;
+    }
+    .heading {
+        padding: 10px 15px; 
+    }
+
+    .heading h1 {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .heading .logo {
+        width: clamp(40px, 8vw, 60px); 
+        height: clamp(40px, 8vw, 60px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .character {
+        width: 100%; 
+    }
+
+    .form input, .form button {
+        max-width: 100%;
+    }
+
+    .heading {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .heading h1 {
+        font-size: clamp(0.8rem, 3vw, 1rem); 
+        text-align: center; 
+    }
+
+    .heading .logo {
+        margin-left: 0; 
+        margin-top: 10px; 
+        width: clamp(30px, 6vw, 50px); 
+        height: clamp(30px, 6vw, 50px);
+    }
+}
