@@ -1,6 +1,6 @@
 
 # Link
-
+https://nabilfirdiansyah19.github.io/JAN-PEKERJA-GAME/
 
 # Deskripsi Proyek
 Proyek game bernama JAN PEKERJA . Game ini memiliki 6 map + 1 map utama.
