@@ -370,7 +370,7 @@ areaMap.forEach((row, i) => {
 
 // Ini buat ngeload gambar map
 const image = new Image();
-image.src = '../designmap/jlnawalzoom.png';
+image.src = './designmap/jlnawalzoom.png';
 console.log(image);
 
 // Ambil nama karakter
@@ -389,16 +389,16 @@ const playerImage = {
     left: new Image(),
     right: new Image(),
 }
-playerImage.down.src = "../image/" + character + ".png";
-playerImage.up.src = `../image/${character.replace('down', 'up')}.png`;
-playerImage.left.src = `../image/${character.replace('down', 'left')}.png`;
-playerImage.right.src = `../image/${character.replace('down', 'right')}.png`;
+playerImage.down.src = "./image/" + character + ".png";
+playerImage.up.src = `./image/${character.replace('down', 'up')}.png`;
+playerImage.left.src = `./image/${character.replace('down', 'left')}.png`;
+playerImage.right.src = `./image/${character.replace('down', 'right')}.png`;
 
 
 const workImage = new Image();
 function loadWorkImage(mapType) {
     //const workImage = new Image();
-    workImage.src = `../image/${character}${mapType}.png`; // Ganti gambar berdasarkan map
+    workImage.src = `./image/${character}${mapType}.png`; // Ganti gambar berdasarkan map
     workImage.onload = () => {
         console.log(`Gambar kerja untuk ${mapType} berhasil dimuat.`);
     };
@@ -440,22 +440,22 @@ function drawBar(x, y, barWidth, barHeight, percentage, color, logo) {
 
 // Preload logo untuk status bar agar bisa dipakai di setiap frame
 const healthLogo = new Image();
-healthLogo.src = '../image/health.png';
+healthLogo.src = './image/health.png';
 
 const energyLogo = new Image();
-energyLogo.src = '../image/energy.png';
+energyLogo.src = './image/energy.png';
 
 const hungerLogo = new Image();
-hungerLogo.src = '../image/hunger.png';
+hungerLogo.src = './image/hunger.png';
 
 const hygieneLogo = new Image();
-hygieneLogo.src = '../image/hygiene.png';
+hygieneLogo.src = './image/hygiene.png';
 
 const happinessLogo = new Image();
-happinessLogo.src = '../image/happiness.png';
+happinessLogo.src = './image/happiness.png';
 
 const goldLogo = new Image();
-goldLogo.src = '../image/gold.png';
+goldLogo.src = './image/gold.png';
 
 // ini buat tempat jual
 const sellerNPC = {
@@ -885,7 +885,7 @@ function openSellMenu() {
 
         // tambahin gambar di dalam menu
         const itemImage = document.createElement('img');
-        itemImage.src = `../image/item/${itemName.toLowerCase()}.png`; 
+        itemImage.src = `./image/item/${itemName.toLowerCase()}.png`; 
         itemImage.alt = itemName;
         itemImage.style.width = '50px';
         itemImage.style.height = '50px';
@@ -1005,7 +1005,7 @@ function openBuyMenu(category) {
 
         // tambahin gambar di dalam menu
         const itemImage = document.createElement('img');
-        itemImage.src = `../image/item/${itemName.toLowerCase().replace(/\s+/g, '_')}.png`; 
+        itemImage.src = `./image/item/${itemName.toLowerCase().replace(/\s+/g, '_')}.png`; 
         itemImage.alt = itemName;
         itemImage.style.width = '40px';
         itemImage.style.height = '40px';
@@ -1499,7 +1499,7 @@ function animate() {
 animate()
 
 const marketMapImage = new Image();
-marketMapImage.src = '../designmap/marketzoom.png';
+marketMapImage.src = './designmap/marketzoom.png';
 console.log(marketMapImage);
 const marketMap = new Sprite({position: {
     x: 0,
@@ -1510,7 +1510,7 @@ const marketMap = new Sprite({position: {
     height: 740,
 })
 const houseMapImage = new Image();
-houseMapImage.src = '../designmap/homezoom.png';
+houseMapImage.src = './designmap/homezoom.png';
 console.log(houseMapImage);
 const houseMap = new Sprite({position: {
     x: 0,
@@ -1521,7 +1521,7 @@ const houseMap = new Sprite({position: {
     height: 740,
 })
 const forestMapImage = new Image();
-forestMapImage.src = '../designmap/forestzoom.png';
+forestMapImage.src = './designmap/forestzoom.png';
 console.log(forestMapImage);
 const forestMap = new Sprite({position: {
     x: 0,
@@ -1532,7 +1532,7 @@ const forestMap = new Sprite({position: {
     height: 740,
 })
 const meathouseMapImage = new Image();
-meathouseMapImage.src = '../designmap/meathousezoom.png';
+meathouseMapImage.src = './designmap/meathousezoom.png';
 console.log(meathouseMapImage);
 const meathouseMap = new Sprite({position: {
     x: 0,
@@ -1543,7 +1543,7 @@ const meathouseMap = new Sprite({position: {
     height: 740,
 })
 const caveMapImage = new Image();
-caveMapImage.src = '../designmap/cavezoom.png';
+caveMapImage.src = './designmap/cavezoom.png';
 console.log(caveMapImage);
 const caveMap = new Sprite({position: {
     x: 0,
@@ -1554,7 +1554,7 @@ const caveMap = new Sprite({position: {
     height: 740,
 })
 const farmMapImage = new Image();
-farmMapImage.src = '../designmap/farmzoom.png';
+farmMapImage.src = './designmap/farmzoom.png';
 console.log(farmMapImage);
 const farmMap = new Sprite({position: {
     x: 0,
@@ -3849,7 +3849,7 @@ function updateInventoryUI() {
 
         // namabahin gambar item
         const itemImage = document.createElement("img");
-        itemImage.src = `../image/item/${item.name.toLowerCase().replace(/\s+/g, '_')}.png`;
+        itemImage.src = `./image/item/${item.name.toLowerCase().replace(/\s+/g, '_')}.png`;
         itemImage.alt = item.name;
         itemImage.style.width = "30px";
         itemImage.style.height = "30px";
